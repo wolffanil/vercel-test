@@ -49,13 +49,14 @@ app.post("/red_admin", async (req, res) => {
   if (admin) {
     // res.cookie.admins = admin;
     await new Promise((res) => setTimeout(res, 1000));
-    res.cookie("admins", admin.login, {
+    await res.cookie("admins", admin.login, {
       sameSite: "none",
       httpOnly: true,
+      secure: true,
       expires: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
     });
 
-    return res.render("/");
+    return res.redirect("/");
   } else {
     return res.send("Данный пользователь не найден");
   }
