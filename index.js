@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const db = require("./database");
 
@@ -17,6 +18,8 @@ const Comment = require("./models/comments");
 dotenv.config();
 
 app.use(helmet());
+
+app.use(cors({ origin: "*", credentials: true }));
 
 app.use(
   helmet.contentSecurityPolicy({
