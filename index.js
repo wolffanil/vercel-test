@@ -75,6 +75,9 @@ app.post("/comment_create", async (req, res) => {
 
 app.get("/", (req, res) => {
   const currentAdmin = res.cookie.admins;
+  await new Promise((res) => setTimeout(res, 1000));
+
+
   res.render("index", { admin: currentAdmin });
 });
 
