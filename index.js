@@ -49,7 +49,7 @@ app.post("/red_admin", async (req, res) => {
   if (admin) {
     // res.cookie.admins = admin;
     await new Promise((res) => setTimeout(res, 1000));
-    res.cookie("admins", admin, {
+    res.cookie("admins", admin.login, {
       sameSite: "none",
       httpOnly: true,
       expires: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
@@ -84,8 +84,8 @@ app.post("/comment_create", async (req, res) => {
 });
 
 app.get("/", async (req, res) => {
-  const currentAdmin = res.cookie.admins;
   await new Promise((res) => setTimeout(res, 1000));
+  const { currentAdmin } = req.cookies;
 
   res.render("index", { admin: currentAdmin });
 });
