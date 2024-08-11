@@ -1,6 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
+const path = require("path");
+const cookieParser = require("cookie-parser");
 
 const db = require("./database");
 
@@ -33,12 +35,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.set("view engine", "ejs");
-
-const cookieParser = require("cookie-parser");
+app.set("views", path.join(__dirname, "views"));
 
 app.use(cookieParser("dlkhfljdhfl3e0ldljh3-oxohdfcjsb"));
-
-const path = require("path");
 
 app.use(express.static(path.join(__dirname, "public")));
 
