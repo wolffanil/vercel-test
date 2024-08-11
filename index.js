@@ -18,6 +18,8 @@ const Comment = require("./models/comments");
 dotenv.config();
 
 app.use(helmet());
+app.use(cookieParser());
+app.use(cors({ origin: "*", credentials: true }));
 
 app.use(
   helmet.contentSecurityPolicy({
@@ -38,8 +40,6 @@ app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(cookieParser());
-
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/red_admin", async (req, res) => {
@@ -47,8 +47,13 @@ app.post("/red_admin", async (req, res) => {
 
   const admin = await Admin.findOne({ login: login, password: password });
   if (admin) {
+    // res.cookie.admins = admin;
     await new Promise((res) => setTimeout(res, 1000));
-    res.cookie.admins = admin;
+    res.cookie("admins", admin, {
+      sameSite: "none",
+      httpOnly: true,
+      expires: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
+    });
 
     return res.redirect("/");
   } else {
