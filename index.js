@@ -19,8 +19,6 @@ dotenv.config();
 
 app.use(helmet());
 
-app.use(cors({ origin: "*", credentials: true }));
-
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -49,7 +47,12 @@ app.post("/red_admin", async (req, res) => {
 
   const admin = await Admin.findOne({ login: login, password: password });
   if (admin) {
-    res.cookie.admins = admin;
+    // res.cookie.admins = admin;
+    res.cookie("admins", admin, {
+      sameSite: "none",
+    });
+    await new Promise((res) => setTimeout(res, 1000));
+
     return res.redirect("/");
   } else {
     return res.send("Данный пользователь не найден");
@@ -72,6 +75,8 @@ app.post("/comment_create", async (req, res) => {
     date: currentDate,
   });
   if (comments) {
+    await new Promise((res) => setTimeout(res, 1000));
+
     return res.redirect("/comment");
   }
 });
@@ -101,6 +106,8 @@ app.post("/comment/delete/:id", async (req, res) => {
 
   try {
     await Comment.findByIdAndDelete(commentId); // Удаляем комментарий по ID
+    await new Promise((res) => setTimeout(res, 1000));
+
     return res.redirect("/comment"); // Перенаправляем на страницу комментариев после удаления
   } catch (error) {
     console.error(error);
