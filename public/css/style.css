@@ -1,0 +1,690 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik/static/Rubik-Regular.ttf);
+}
+.back_header{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+a{
+    font-family: 'Rubik';
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+    transition: 0.5s;
+}
+a:hover{
+    color:#F7931D;
+}
+.img_social{
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+}
+.div_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2vw;
+}
+.a_header{
+    display: flex;
+    gap: 2vw;
+}
+.header_social{
+    display: flex;
+    gap: 2vw;
+}
+.title_main{
+    font-family: 'Rubik';
+    font-size: 6vw;
+    color: white;
+    text-align: center;
+}
+.bottom_title_main{
+    font-family: 'Rubik';
+    font-size: 2.5vw;
+    color: white;
+    text-align: center;
+
+}
+.div_text_main{
+    margin-top: 12vw;
+    padding-bottom: 10.5vw;
+}
+.button_header{
+    font-family: 'Rubik';
+    font-size: 2.5vw;
+    color: white;
+    background-color: #FF5C00;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    width: 25vw;
+    cursor: pointer;
+}
+.div_text_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+.line_block_one{
+    border: 0.1vw solid #FF5C00 ;
+    width: 25vw;
+}
+.title_two{
+    font-family: 'Rubik';
+    font-size: 4vw;
+}
+.p_text_block_two{
+    font-family: 'Rubik';
+    font-size: 2vw;
+}
+.block_one{
+    height: 50vw;
+}
+.photo_one{
+    width: 35vw;
+    border-radius: 0.7vw;
+}
+.div_block_one{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+    gap: 2.5vw;
+}
+.div_left_block_one{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.button_block_one{
+    font-family: 'Rubik';
+    font-size: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    color: white;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 0.7vw;
+    cursor: pointer;
+}
+.block_two{
+    height: 83vw;
+    display: flex;
+    justify-content: center;
+}
+.div_block_two{
+    background-color: #FF5C00;
+    padding: 2.7vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5vw;
+}
+.title_three{
+    font-family: 'Rubik';
+    font-size: 4vw;
+    color: white;
+}
+.p_text_ad{
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    color: white;
+    width: 20vw;
+}
+.title_ad{
+    font-size: 2vw;
+}
+.icon_ad{
+    width: 5vw;
+}
+.div_one_ad{
+    border: 0.1vw solid white;
+    text-align: center;
+    padding: 1vw;
+    width: 20vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5vw;
+    border-radius: 1vw;
+}
+.div_top{
+    display: flex;
+    gap: 2vw;
+}
+.div_advantages{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding-top: 2vw;
+}
+.button_block_three{
+    font-family: 'Rubik';
+    font-size: 3vw;
+    color: white;
+    background-color: #FF5C00;
+    border: none;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    padding: 1vw;
+}
+.div_block_three{
+    text-align: center;
+    margin-top: 5vw;
+}
+.title_four{
+    font-family: 'Rubik';
+    font-size: 4vw;
+}
+.price{
+    font-family: 'Rubik';
+    font-size: 4vw;
+    color: #F7931D;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.title_five{
+    font-family: 'Rubik';
+    font-size: 4vw;
+}
+.text_four{
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+}
+.div_text_block_four{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.div_blocks_four{
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    padding-top: 3vw;
+}
+.photo_two{
+    width: 35vw;
+    border-radius: 0.7vw;
+    height: 30vw;
+}
+.block_four{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+}
+
+.ball{
+    width: 20vw;
+    margin-right: 12vw;
+}
+.block_five{
+    display: flex;
+    justify-content: end;
+    padding-top: 2vw;
+}
+footer{
+    background-color: #FF5C00;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a_footer:hover{
+    color: white;
+}
+.p_footer{
+    font-family: 'Rubik';
+    font-size: 1.2vw;
+    color: white;
+}
+.div_footer{
+    display: flex;
+    justify-content: center;
+    gap: 5.5vw;
+    align-items: center;
+}
+
+.div_contact_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.div_main_block_admin{
+    background-image: url(/photo/clown_back_admin.jpg);
+    height: 46vw;
+    background-size: cover;
+}
+.title_admin{
+    font-family: 'Rubik';
+    font-size: 3vw;
+    color: white;
+}
+.button_admin{
+    background-color: #FF5C00;
+    color: white;
+    border: none;
+    border-radius: 0.7vw;
+    font-family: 'Rubik';
+    font-size: 2vw;
+    padding: 1vw;
+    width: 15vw;
+    cursor: pointer;
+}
+.name_input{
+    font-family: 'Rubik';
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 0.1vw solid #FF5C00 ;
+    font-size: 2vw;
+    color: white;
+    width: 30vw;
+}
+.name_input::placeholder{
+    font-family: 'Rubik';
+
+    font-size: 2vw;
+    color: white;
+    padding-left: 1vw;
+}
+.div_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    align-items: center;
+    padding-top: 3vw;
+}
+.div_main_block_admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title_comment{
+    font-family: 'Rubik';
+    font-size: 3vw;
+
+}
+.p_comment{
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+}
+.inp_comment{
+    font-size: 1.5vw;
+    font-family: 'Rubik';
+    border: 0.1vw solid #FF5C00;
+    outline: none;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+}
+.button_comment{
+    background-color: #FF5C00;
+    font-size: 1.5vw;
+    font-family: 'Rubik';
+    border: none;
+    width: 15vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    color: white;
+    cursor: pointer;
+}
+.div_block_one_comment{
+    display: flex;
+justify-content: center;
+}
+.div_com{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+.block_one_comment{
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title_comment_comment{
+    font-family: 'Rubik';
+    font-size: 3vw;
+}
+.block_cooment_two{
+    height: 46vw;
+}
+.otz_title{
+    font-family: 'Rubik';
+    font-size: 3vw;
+    color: #FF5C00;
+    text-align: center;
+    margin-top: 15vw;
+}
+.comment{
+    background-color: #FF5C00;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    width: 30vw;
+    gap: 1vw;
+    height: 25vw;
+
+}
+.content_comment{
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    color: white;
+    width: 30vw;
+    word-wrap: break-word;
+}
+.div_main_comments{
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.p_comment1{
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+    color: white;
+}
+.div_top_comment{
+    display: flex;
+    justify-content: space-between;
+}
+.line_comment{
+    border: 0.1vw solid white;
+
+}
+.div_bottom_comment{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+.content_comment1{
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+    color: white;
+}
+.div_block_comment_two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vw;
+}
+.title_comment_comment{
+    padding-bottom: 3vw;
+}
+.navbar {
+    
+    display: none;
+}
+.maks{
+    display: none;
+}
+.div_text_block_four1{
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .a_header{
+        display: none;
+    }
+    .div_header{
+        justify-content: space-between;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    .bottom_title_main{
+        font-size: 3vw;
+    }
+    .button_header{
+        font-size: 4vw;
+        width: 35vw;
+    }
+    .div_block_one{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        text-align: center;
+    }
+    .title_two{
+        font-size: 6vw;
+    }
+    .line_block_one{
+        width: auto;
+    }
+    .p_text_block_two{
+        font-size: 4vw;
+    }
+    .block_one{
+        height: auto;
+    }
+    .button_block_one{
+        font-size: 5vw;
+    }
+    .maks{
+        display: block;
+        width: 76vw;
+        border-radius: 1vw;
+    }
+    .photo_one{
+        display: none;
+    }
+    .div_block_two{
+        margin-top: 8vw;
+    }
+    .block_two{
+        height: auto;
+    }
+    .title_three{
+        font-size: 6vw;
+    }
+    .div_top{
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .div_one_ad{
+        width: 80vw;
+        height: 100vw;
+        padding-top: 4vw;
+    }
+    .title_ad{
+        font-size: 5vw;
+    }
+    .p_text_ad{
+        width: 50vw;
+    }
+    .p_text_ad{
+        font-size: 4vw;
+    }
+    .icon_ad{
+        width: 10vw;
+        
+    }
+    .div_block_two{
+        gap: 4vw;
+    }
+    .title_four{
+        font-size: 7vw;
+    }
+    .price{
+        font-size: 6vw;
+    }
+    .button_block_three{
+        font-size: 5vw;
+    }
+    .title_five{
+        font-size: 7vw;
+    }
+    .photo_two{
+        width: 50vw;
+        height: 45vw;
+    }
+    .text_four{
+        font-size: 4vw;
+    }
+    .div_text_block_four{
+        display: none;
+    }
+    .div_text_block_four1{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        align-items: center;
+    }
+    .div_blocks_four{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .button_block_three{
+        width: 50vw;
+    }
+    .a_footer{
+        font-size: 3vw;
+    }
+    .p_footer{
+        font-size: 3vw;
+
+    }
+    footer{
+        height: 20vw;
+        margin-top: 5vw;
+    }
+    .navbar {
+        overflow: hidden;
+        font-family: 'Rubik';
+        display: block;
+    }
+    
+    /* Стили для ссылок меню */
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Rubik';
+        font-size: 3vw;
+    }
+    
+    /* Цвет при наведении мыши */
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    
+    /* Стили для выпадающего меню */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+    
+    /* Кнопка для выпадающего меню */
+    .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: black;
+        padding: 1vw;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        width: 5vw;
+    }
+    
+    /* Стили для содержимого выпадающего меню */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Стили для элементов выпадающего меню */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+    }
+    
+    /* Цвет при наведении на элементы выпадающего меню */
+    .dropdown-content a:hover {
+        background-color: #FF5C00;
+    }
+    
+    /* Показать содержимое выпадающего меню при наведении на кнопку */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    /* Показать кнопку при наведении на контейнер */
+    .dropdown:hover .dropbtn {
+        color: white;
+    }
+    .img_social{
+        width: 5vw;
+        height: 5vw;
+    }
+    .title_comment{
+        font-size: 7vw;
+    }
+    .p_comment{
+        font-size: 4vw;
+    }
+    .inp_comment{
+        width: 50vw;
+        height: 20vw;
+        font-size: 5vw;
+    }
+    .block_one_comment{
+        height: auto;
+    }
+    .button_comment{
+        width: 40vw;
+        font-size: 5vw;
+    }
+    .div_com{
+        gap: 5vw;
+    }
+    .title_comment_comment{
+        font-size: 7vw;
+    }
+    .otz_title{
+        font-size: 5vw;
+    }
+    .comment{
+        width: 40vw;
+        height: auto;
+    }
+    .block_cooment_two{
+        height: auto;
+    }
+    .content_comment1{
+        font-size: 3.5vw;
+    }
+    .p_comment1{
+        font-size: 4vw;
+    }
+    .content_comment{
+        font-size: 3vw;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/photo/photo_cap.jfif" type="png">
+    <title>Жонглёр</title>
+</head>
+<body>
+    <img src="/photo/clown.jpeg" alt="" class="back_header">
+    <header>
+        <div class="div_header">
+            <div class="a_header">
+                <a href="#block_one"><b>О тренере</b></a>
+                <a href="#block_two"><b>Преимущества жонглирования</b></a>
+                <a href="#block_four"><b>Описание курса</b></a>
+                <a href="/comment"><b>Отзывы</b></a>
+            </div>
+            <div class="navbar">
+               
+                <div class="dropdown">
+                 
+                    <img src="/photo/dropdaun.png" alt="" class="dropbtn">
+                    <div class="dropdown-content">
+                        <a href="#block_one"><b>О тренере</b></a>
+                <a href="#block_two"><b>Преимущества жонглирования</b></a>
+                <a href="#block_four"><b>Описание курса</b></a>
+                <a href="/comment"><b>Отзывы</b></a>
+                    </div>
+                </div> 
+            </div>
+            <div class="header_social">
+                <a href=""><img src="/photo/telegram_social.png" alt="" class="img_social"></a>
+                <a href=""><img src="/photo/email_social.png" alt="" class="img_social"></a>
+            </div>
+        </div>
+        <div class="div_text_main">
+        <h1 class="title_main">Курс по жонглированию</h1>
+        <h2 class="bottom_title_main">Жонглирования 3 мячами + 3 трюка с мячами</h2>
+        <button class="button_header">Приобрести курс</button>
+    </div>
+    </header>
+    <div class="block_one_comment">
+        <div class="div_block_one_comment">
+            <form action="/comment_create" method="post" >
+                <div class="div_com">
+            <h1 class="title_comment">Оставить отзыв</h1>
+            <p class="p_comment">Ваше имя</p>
+            <textarea name="name" class="inp_comment" maxlength="20" required></textarea>
+            <p class="p_comment">Достоинства</p>
+            <textarea name="resp" class="inp_comment" maxlength="50" required></textarea>
+            <p class="p_comment">Недостатки</p>
+            <textarea name="diz" class="inp_comment" maxlength="50" required></textarea>
+            <p class="p_comment">Общее впечатление</p>
+            <textarea name="description" class="inp_comment" maxlength="75" required></textarea>
+            <input type="submit" value="Оставить отзыв" class="button_comment">
+        </div>
+        </form>
+        </div>
+    </div>
+    <div class="block_cooment_two">
+        <div class="div_block_comment_two">
+            <h1 class="title_comment_comment">Отзывы</h1>
+            <div class="div_main_main_comments">
+
+            
+            <div class="div_main_comments">
+                <% if (comments.length > 0) { %>
+                    <% comments.forEach(function(comment) { %> <!-- Изменено на comment для ясности -->
+                        <div class="comment">
+                            <div class="div_top_comment">
+                                <p class="content_comment1"><%= comment.name %></p>
+                                <p class="content_comment1"><%= comment.date %></p>
+                            </div>
+                            <hr class="line_comment">
+                            <div class="div_bottom_comment">
+                                <p class="p_comment1"><b>Достоинства</b></p>
+                                <p class="content_comment"><%= comment.resp %></p>
+                                <p class="p_comment1"><b>Недостатки</b></p>
+                                <p class="content_comment"><%= comment.diz %></p>
+                                <p class="p_comment1"><b>Общее впечатление</b></p>
+                                <p class="content_comment"><%= comment.description %></p>
+                            </div>
+                            <% if (admin && admin.login != null && admin.password != null) { %>
+                                <form action="/comment/delete/<%= comment._id %>" method="POST" style="display:inline;">
+                                    <button type="submit">Удалить</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p class="otz_title">Отзывов пока нет.</p>
+                <% } %>
+            </div>
+           </div>
+        </div>
+    </div>
+    <footer>
+        <div class="div_footer">
+            <div class="header_social">
+                <a href=""><img src="/photo/telegram_social.png" alt="" class="img_social"></a>
+                <a href=""><img src="/photo/email_social.png" alt="" class="img_social"></a>
+            </div>
+            <div class="div_contact_footer">
+                <a href="mailto:m.kcozub2012@gmail.com" class="a_footer">Почта: m.kcozub2012@gmail.com</a>
+                <p class="p_footer">Козуб Карина Сергеевна <br> ИНН: 820100520664</p>
+            </div>
+            <div class="a_header">
+                <a href="#block_one" class="a_footer"><b>О тренере</b></a>
+                <a href="#block_two" class="a_footer"><b>Преимущества жонглирования</b></a>
+                <a href="#block_four" class="a_footer"><b>Описание курса</b></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
