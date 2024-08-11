@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const helmet = require("helmet");
 
 const db = require("./database");
 
@@ -12,6 +13,20 @@ const Admin = require("./models/admins");
 const Comment = require("./models/comments");
 
 dotenv.config();
+
+app.use(helmet());
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'none'"],
+      fontSrc: ["'self'", "data:"], // Разрешение загрузки шрифтов из собственных источников и data URI
+      scriptSrc: ["'self'"], // Пример разрешения скриптов из собственного источника
+      styleSrc: ["'self'"], // Пример разрешения стилей из собственного источника
+      // Добавьте другие директивы по мере необходимости
+    },
+  })
+);
 
 app.use(express.json());
 
