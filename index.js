@@ -47,7 +47,7 @@ app.post("/red_admin", async (req, res) => {
   const admin = await Admin.findOne({ login: login, password: password });
   if (admin) {
     res.cookie.admins = admin;
-    return res.redirect("/main");
+    return res.redirect("/");
   } else {
     return res.send("Данный пользователь не найден");
   }
