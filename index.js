@@ -55,7 +55,7 @@ app.post("/red_admin", async (req, res) => {
       expires: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
     });
 
-    return res.redirect("/");
+    return res.render("/");
   } else {
     return res.send("Данный пользователь не найден");
   }
