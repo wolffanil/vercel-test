@@ -47,13 +47,8 @@ app.post("/red_admin", async (req, res) => {
 
   const admin = await Admin.findOne({ login: login, password: password });
   if (admin) {
-    // res.cookie.admins = admin;
     await new Promise((res) => setTimeout(res, 1000));
-    res.cookie("admins", admin, {
-      sameSite: "none",
-      httpOnly: true,
-      expires: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000),
-    });
+    res.cookie.admins = admin;
 
     return res.redirect("/");
   } else {
